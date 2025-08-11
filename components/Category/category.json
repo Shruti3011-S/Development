@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Breed Dry Dog Food",
+    "image": "/Assets/Images/teddy.png",
+    "price": 100,
+    "originalPrice": 990,
+    "rating": 5
+    },
+  {
+    "name": "CANON EOS DSLR Camera",
+    "image": "/Assets/Images/camera.png",
+    "price": 360,
+    "originalPrice": 1200,
+    "rating": 5
+    },
+  {
+    "name": "ASU7S FHD Gaming laptop",
+    "image": "/Assets/Images/laptop.png",
+    "price": 660,
+    "originalPrice": 700,
+    "rating": 5
+    },
+  {
+    "name": "Curology Product Set",
+    "image": "/Assets/Images/cosmetic.png",
+    "price": 1100,
+    "originalPrice": 1200,
+    "rating": 5,
+    "button": "<button class='btn btn-primary'>Add to Cart</button>"
+    },
+  {
+    "name": "Kids Electric Car",
+    "image": "/Assets/Images/car.png",
+    "price": 1100,
+    "originalPrice": 1200,
+    "rating": 5,
+    "button": "<button class='btn btn-primary'>Add to Cart</button>"
+
+    },
+  {
+    "name": "Jr. Zoom Soccer Cleats",
+    "image": "/Assets/Images/shoes.png",
+    "price": 1100,
+    "originalPrice": 1200,
+    "rating": 5,
+    "button": "<button class='btn btn-primary'>Add to Cart</button>"
+    },
+  {
+    "name": "GPII Shooter USB Gamepad",
+    "image": "/Assets/Images/gaming-remote.png",
+    "price": 1100,
+    "originalPrice": 1200,
+    "rating": 5,
+    "button": "<button class='btn btn-primary'>Add to Cart</button>"
+    },
+  {
+    "name": "Quilted Satin Jacket",
+    "image": "/Assets/Images/jacket.png",
+    "price": 660,
+    "originalPrice": 700,
+    "rating": 5,
+    "button": "<button class='btn btn-primary'>Add to Cart</button>"
+    }
+]

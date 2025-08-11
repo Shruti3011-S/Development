@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Website Header & Footer</title>
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+</head>
+<body>
+
+  <div class="bg-dark text-white text-center py-1 small">
+  Summer Sale For All Swim Suits And Free Express Delivery – OFF 50%! 
+  <a href="#" class="text-white text-decoration-none ms-1">ShopNow</a>
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow"> 
+    <a class="navbar-brand font-weight-bold" href="#">Exclusive</a>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form-inline">
+      <input
+        class="form-control ml-3"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+    </form>
+  </nav>
+
+  <div class="container-fluid mt-5 mb-5">
+    <div class="row no-gutters align-items-center">
+      
+      <div class="col-md-6">
+        <img
+          src="/Assets/Images/phone.png"
+          alt="Main Image"
+          class="img-fluid rounded" width="600" height="400"
+        />
+      </div>
+      
+      <div class="col-md-6 ">
+        <h2>Login</h2>
+        <form>
+          <div class="form-group">
+            <label for="inputName">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputName"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input 
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              placeholder="Enter your password"
+            />
+          </div>
+          <button type="submit" class="btn btn-danger" href="/components/Category/category.html">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>  
+
+  <!-- Footer Start -->
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2 mb-4">
+        <h5>Exclusive</h5>
+        <p>Subscribe for 10% off your first order</p>
+        <div class="d-flex">
+          <input type="email" placeholder="Email" class="form-control form-control-sm me-2">
+          <button class="btn btn-light btn-sm">➤</button>
+        </div>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h6>Support</h6>
+        <address class="mb-0">
+          111 Bijoy sarani, Dhaka<br>
+          <a href="mailto:exclusive@gmail.com" class="text-white text-decoration-none">exclusive@gmail.com</a><br>
+          <a href="tel:+88015888889999" class="text-white text-decoration-none">+88015-88888-9999</a>
+        </address>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h6>Account</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">My Account</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Login / Register</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Cart</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Wishlist</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 mb-4">
+        <h6>Quick Link</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Terms Of Use</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h6>Download App</h6>
+        <p>Save $3 with App New User Only</p>
+      </div>
+
+    </div>
+
+    <div class="text-center border-top pt-3 mt-4">
+      <small>© Copyright Rimel 2022. All rights reserved</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Footer End -->
+
+  
+</body>
+</html>
