@@ -11,8 +11,7 @@
   />
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  
+  <script src="index.js"></script>
 </head>
 <body>
 
@@ -64,32 +63,28 @@
       
       <div class="col-md-6 ">
         <h2>Login</h2>
-        <form>
+        <form onsubmit="event.preventDefault(); validateLogin();">
           <div class="form-group">
-            <label for="inputName">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputName"
-              placeholder="Enter your name"
-            />
+            <label for="inputName">Username</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Enter your username" required />
           </div>
           <div class="form-group">
             <label for="inputPassword">Password</label>
-            <input 
-              type="password"
-              class="form-control"
-              id="inputPassword"
-              placeholder="Enter your password"
-            />
+            <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" required />
           </div>
-          <button type="submit" class="btn btn-danger" href="/components/Category/category.html">Log In</button>
+          
+          <div id="loginError" style="display: none;"></div>
+          
+          <div class="form-group mt-3">
+           <a href="/components/Category/category.html" class="btn btn-danger me-2">Log In</a>
+
+          </div>
+         
         </form>
       </div>
     </div>
   </div>  
 
-  <!-- Footer Start -->
 <footer class="bg-dark text-white py-5">
   <div class="container">
     <div class="row">
@@ -146,7 +141,6 @@
   </div>
 </footer>
 
-<!-- Footer End -->
 
   
 </body>

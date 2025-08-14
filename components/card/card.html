@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping Cart - Exclusive</title>
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+ 
+  
+</head>
+<body class="bg-light">
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar text-white text-center py-2 small">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <span>Summer Sale For All Swim Suits And Free Express Delivery – OFF 50%!</span>
+        <a href="#" class="text-white text-decoration-none font-weight-bold">ShopNow</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Exclusive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-3"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item mx-3"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <form class="d-flex">
+        <input class="form-control ms-3" type="search" placeholder="Search..." aria-label="Search" />
+      </form>
+
+      <div class="d-flex align-items-center ms-3 mx-3">
+        <a href="/components/wishlist/wishlist.html" class="text-dark me-3 fs-5 mx-3" title="Wishlist" ><i class="bi bi-heart"></i></a>
+        <a href="/components/card/card.html"  class="text-dark fs-5" title="Cart"><i class="bi bi-cart"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Cart Items Section -->
+      <div class="col-lg-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-white border-0 py-3">
+            <h4 class="card-title mb-0 ">
+              <i class="bi bi-cart3 me-2"></i>Shopping Cart
+            </h4>
+          </div>
+          <div class="card-body p-0">
+            
+            <!-- Cart Table -->
+            <div class="table-responsive">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-left">Product</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Subtotal</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cart-items">
+                  <!-- Cart items will be dynamically populated here -->
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-between p-4 border-top">
+              <button class="btn btn-outline-secondary btn-custom" onclick="returnToShop()">
+                <i class="bi bi-arrow-left me-2"></i>Return To Shop
+              </button>
+              <button class="btn btn-primary" onclick="updateCart()">
+                <i class="bi bi-arrow-clockwise me-2"></i>Update Cart
+              </button>
+            </div>
+            
+            <!-- Coupon Section -->
+            <div class="coupon-section mx-4 mb-4">
+              
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter coupon code" id="coupon-code">
+                <div class="input-group-append">
+                  <button class="btn btn-danger" id="apply-coupon">
+                    <i class="bi bi-check-lg me-2"></i>Apply Coupon
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cart Summary Section -->
+      <div class="col-lg-4">
+        <div class="card cart-summary border-0 shadow-sm" style="top: 100px;">
+          <div class="card-body p-4">
+            <h5 class="card-title  mb-4">
+              <i class="bi bi-receipt me-2"></i>Cart Total
+            </h5>
+            
+            <div class="d-flex justify-content-between mb-3">
+              <span class="text-muted">Subtotal:</span>
+              <span class="font-weight-bold" id="subtotal">$0</span>
+            </div>
+            
+            <div class="d-flex justify-content-between mb-3">
+              <span class="text-muted">Discount:</span>
+              <span class="text-danger font-weight-bold" id="discount">$0</span>
+            </div>
+            
+            <div class="d-flex justify-content-between mb-3">
+              <span class="text-muted">Shipping:</span>
+              <span class="text- font-weight-bold">
+                <i class="bi bi-check-circle me-1"></i>Free
+              </span>
+            </div>
+            
+            <hr class="my-3">
+            
+            <div class="d-flex justify-content-between mb-4">
+              <span class="h5 mb-0">Total:</span>
+              <span class="h4 text mb-0" id="total">$0</span>
+            </div>
+          <a href="/components/checkout/checkout.html" class="btn btn-danger btn-lg btn-block btn-custom">
+            <i class="bi bi-credit-card me-2"></i>Proceed to Checkout
+          </a>
+            
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Start -->
+  <footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-2 mb-4">
+          <h5 class="text">Exclusive</h5>
+          <p>Get 10% off your first order</p>
+          <div class="d-flex">
+            <input type="email" placeholder="Enter your email" class="form-control form-control-sm me-2">
+            <button class="btn btn-sm">➤</button>
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="text">Support</h6>
+          <address class="mb-0">
+            111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.<br>
+            <a href="mailto:exclusive@gmail.com" class="text-white text-decoration-none">exclusive@gmail.com</a><br>
+            <a href="tel:+88015888889999" class="text-white text-decoration-none">+88015-88888-9999</a>
+          </address>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="text">Account</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">My Account</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Login / Register</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Cart</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Wishlist</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h6 class="text">Quick Link</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Terms Of Use</a></li>
+            <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="text">Download App</h6>
+          <p>Save $3 with App New User Only</p>
+          <div class="mb-3">
+            <img src="/Assets/Images/Qrcode.png" alt="QR Code" width="80" height="80" class="rounded">
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-outline-light btn-sm me-2">
+              <i class="bi bi-google-play me-1"></i>Google Play
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="bi bi-apple me-1"></i>App Store
+            </button>
+          </div>
+          <div class="d-flex">
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center border-top pt-4 mt-4">
+        <small>© Copyright Rimel 2022. All rights reserved</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer End -->
+  
+  <script src="card.js"></script>
+
+</body>
+</html>
